@@ -1,0 +1,120 @@
+/* 共通設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6; /* 行間の確保 */
+    padding: 10px;    /* 画面端の余白 */
+}
+
+/* タイトル部分 */
+header {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* タイトル文字 */
+h1 {
+    font-size: 1.5rem;
+}
+
+.calc-container {
+    /* スマホ表示で縦に並べる */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* 大画面での広がり防止 */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 各グループの囲み */
+.player-box, .global-effects, .result-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid #e1e4e8;
+}
+
+/* 各グループの下線 */
+.player-box h2, .global-effects h2, .result-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* 下線の色付け */
+.attacker h2 { border-bottom-color: #ff6b6b; }
+.defender h2 { border-bottom-color: #4dabf7; }
+
+/* 仮実装：項目配置エリア（中身を実装時に削除） */
+.placeholder-content {
+    background: #f8f9fa;
+    padding: 40px 10px;
+    text-align: center;
+    color: #868e96;
+    border: 1px dashed #dee2e6;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* 入力欄 */
+.form-group {
+    margin-bottom: 8px;
+}
+
+.form-group label {
+    display: block;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 0.75rem;
+    line-height: 1.2;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    height: 34px; /* 高さを統一してガタつき防止 */
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #aaadb0;
+    font-size: 0.8rem;
+}
+
+/* PC用レイアウト */
+@media (min-width: 768px) {
+    .calc-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 1:1で左右に分割 */
+        grid-template-areas: 
+            "attack defend"            /* 攻撃側と防御側は分割 */
+            "global global"            /* それ以外は2列分 */
+            "result result";
+    }
+
+    /* クラスとグリッドの対応 */
+    .attacker { grid-area: attack; }
+    .defender { grid-area: defend; }
+    .global-effects { grid-area: global; }
+    .result-box { grid-area: result; }
+}
