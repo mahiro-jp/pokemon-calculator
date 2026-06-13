@@ -108,7 +108,7 @@ footer {
     .calc-container {
         display: grid;
         grid-template-columns: 1fr 1fr; /* 1:1で左右に分割 */
-        grid-template-areas: 
+        grid-template-areas:
             "attack defend"            /* 攻撃側と防御側は分割 */
             "global global"            /* それ以外は2列分 */
             "result result";
