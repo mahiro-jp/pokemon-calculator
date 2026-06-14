@@ -32,13 +32,26 @@
                     <input type="text" id="atk-name" placeholder="例: ガブリアス" autocomplete="off">
                 </div>
                 <div class="form-group flex-1">
-                    <label>タイプ１</label>
                     <div class="type-badge" id="atk-type1">ーー</div>
                 </div>
                 <div class="form-group flex-1">
-                    <label>タイプ２</label>
                     <div class="type-badge" id="atk-type2">ーー</div>
                 </div>
+            </div>
+
+            <div class="race-values-row">
+                <span class="race-title">種族値:</span>
+                <span class="race-num" id="atk-race-hp">0</span>
+                <span class="race-divider">-</span>
+                <span class="race-num" id="atk-race-atk">0</span>
+                <span class="race-divider">-</span>
+                <span class="race-num" id="atk-race-def">0</span>
+                <span class="race-divider">-</span>
+                <span class="race-num" id="atk-race-spatk">0</span>
+                <span class="race-divider">-</span>
+                <span class="race-num" id="atk-race-spdef">0</span>
+                <span class="race-divider">-</span>
+                <span class="race-num" id="atk-race-spd">0</span>
             </div>
 
             <div class="form-row">
@@ -56,12 +69,15 @@
                         <option value="">なし</option>
                     </select>
                 </div>
+            </div>
 
+            <div class="form-row">
                 <div class="form-group">
-                    <label for="atk-nature">性格の一覧</label>
+                    <label for="atk-nature">性格</label>
                     <select id="atk-nature">
-                        <option value="まじめ">まじめ (±)</option>
-                        <option value="いじっぱり">いじっぱり (A↑C↓)</option>
+                        <option value="まじめ">まじめ</option>
+                        <option value="いじっぱり">いじっぱり</option>
+                        <option value="ひかえめ">ひかえめ</option>
                     </select>
                 </div>
             </div>
@@ -69,7 +85,6 @@
             <div class="status-table">
                 <div class="status-row status-header">
                     <div class="cell-label">能力</div>
-                    <div class="cell-race">種族値</div>
                     <div class="cell-point">能力ポイント</div>
                     <div class="cell-nature">性格</div>
                     <div class="cell-rank">ランク</div>
@@ -78,7 +93,6 @@
 
                 <div class="status-row">
                     <div class="cell-label font-bold">ＨＰ</div>
-                    <div class="cell-race"><span id="atk-race-hp">0</span></div>
                     <div class="cell-point">
                         <div class="counter-group">
                             <button type="button" class="btn-minus">-</button>
@@ -93,7 +107,6 @@
 
                 <div class="status-row">
                     <div class="cell-label font-bold">攻撃</div>
-                    <div class="cell-race"><span id="atk-race-atk">0</span></div>
                     <div class="cell-point">
                         <div class="counter-group">
                             <button type="button" class="btn-minus">-</button>
