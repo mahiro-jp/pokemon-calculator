@@ -26,11 +26,96 @@
         
         <section class="player-box attacker">
             <h2>攻撃側</h2>
-            <div class="form-group">
-                <label>ポケモン</label>
-                <input type="text" placeholder="例: ガブリアス" autocomplete="off">
+            <div class="form-row">
+                <div class="form-group flex-2">
+                    <label for="atk-name">ポケモン</label>
+                    <input type="text" id="atk-name" placeholder="例: ガブリアス" autocomplete="off">
+                </div>
+                <div class="form-group flex-1">
+                    <label>タイプ１</label>
+                    <div class="type-badge" id="atk-type1">ーー</div>
+                </div>
+                <div class="form-group flex-1">
+                    <label>タイプ２</label>
+                    <div class="type-badge" id="atk-type2">ーー</div>
+                </div>
             </div>
-            <div class="placeholder-content">（攻撃側の詳細項目エリア）</div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="atk-item">持ち物</label>
+                    <select id="atk-item">
+                        <option value="">なし</option>
+                        <option value="type-up">タイプ強化（1.2倍）</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="atk-ability">特性</label>
+                    <select id="atk-ability">
+                        <option value="">なし</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="atk-nature">性格の一覧</label>
+                    <select id="atk-nature">
+                        <option value="まじめ">まじめ (±)</option>
+                        <option value="いじっぱり">いじっぱり (A↑C↓)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="status-table">
+                <div class="status-row status-header">
+                    <div class="cell-label">能力</div>
+                    <div class="cell-race">種族値</div>
+                    <div class="cell-point">能力ポイント</div>
+                    <div class="cell-nature">性格</div>
+                    <div class="cell-rank">ランク</div>
+                    <div class="cell-real">実数値</div>
+                </div>
+
+                <div class="status-row">
+                    <div class="cell-label font-bold">ＨＰ</div>
+                    <div class="cell-race"><span id="atk-race-hp">0</span></div>
+                    <div class="cell-point">
+                        <div class="counter-group">
+                            <button type="button" class="btn-minus">-</button>
+                            <input type="number" value="0" min="0" max="32" class="input-point">
+                            <button type="button" class="btn-plus">+</button>
+                        </div>
+                    </div>
+                    <div class="cell-nature"><span class="text-muted">ー</span></div>
+                    <div class="cell-rank"><span class="text-muted">ー</span></div>
+                    <div class="cell-real"><span class="real-value" id="atk-real-hp">0</span></div>
+                </div>
+
+                <div class="status-row">
+                    <div class="cell-label font-bold">攻撃</div>
+                    <div class="cell-race"><span id="atk-race-atk">0</span></div>
+                    <div class="cell-point">
+                        <div class="counter-group">
+                            <button type="button" class="btn-minus">-</button>
+                            <input type="number" value="0" min="0" max="32" class="input-point">
+                            <button type="button" class="btn-plus">+</button>
+                        </div>
+                    </div>
+                    <div class="cell-nature">
+                        <select class="select-nature-adj">
+                            <option value="plus">＋</option>
+                            <option value="none" selected>±</option>
+                            <option value="minus">－</option>
+                        </select>
+                    </div>
+                    <div class="cell-rank">
+                        <select class="select-rank-adj">
+                            <option value="0" selected>±0</option>
+                        </select>
+                    </div>
+                    <div class="cell-real"><span class="real-value" id="atk-real-atk">0</span></div>
+                </div>
+            </div>
         </section>
 
         <section class="player-box defender">
