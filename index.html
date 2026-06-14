@@ -226,7 +226,7 @@
                 </div>
             </div>
 
-            <div class="form-row" style="margin-top: 15px;">
+            <div class="form-row">
                 <div class="form-group flex-2">
                     <label for="atk-move-name">技</label>
                     <input type="text" id="atk-move-name" placeholder="例: じしん" autocomplete="off">
@@ -236,6 +236,17 @@
                 </div>
                 <div class="form-group flex-1">
                     <input type="number" id="atk-move-power" placeholder="0" min="0">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>補助効果</label>
+                    <div class="effect-buttons">
+                        <!-- チェックボックスはCSSで非表示にし、labelをボタンとして見せる -->
+                        <input type="checkbox" id="atk-burn" class="toggle-checkbox theme-burn">
+                        <label for="atk-burn" class="toggle-button">やけど</label>
+                    </div>
                 </div>
             </div>
         </section>

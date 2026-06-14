@@ -165,6 +165,7 @@ h1 {
 /* ステータス欄の枠 */
 .status-table {
     margin-top: 15px;
+    margin-bottom: 15px;
     border: 1px solid #dee2e6;
     border-radius: 6px;
     overflow: hidden;
@@ -271,6 +272,48 @@ h1 {
 .counter-group input[type="number"]::-webkit-inner-spin-button {
     appearance: none;
     margin: 0;
+}
+
+/* ON/OFFを切り替えるボタン（ラベル） */
+.effect-buttons {
+    display: flex;
+    gap: 8px;
+    height: 34px;
+}
+
+/* ボタンに紐づくチェックボックスは非表示 */
+.toggle-checkbox {
+    display: none;
+}
+
+/* 未選択の状態 */
+.form-group .toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0; /* 既存のlabelにある下余白を削除 */
+    height: 100%;     /* 親要素（34px）の高さに合わせる */
+    padding: 0 16px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #495057;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    user-select: none; /* テキスト選択を防ぐ */
+}
+
+/* 選択済の状態 */
+.toggle-checkbox.theme-burn:checked + .toggle-button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border-color: #ff6b6b;
+}
+
+.toggle-button:active {
+    transform: scale(0.96);
 }
 
 footer {
