@@ -104,7 +104,8 @@ h1 {
     line-height: 1.2;
 }
 
-.form-group input[type="text"] {
+.form-group input[type="text"],
+.form-group input[type="number"] {
     width: 100%;
     padding: 6px 8px;
     font-size: 0.9rem;
