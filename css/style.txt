@@ -306,14 +306,33 @@ h1 {
 }
 
 /* 選択済の状態 */
-.toggle-checkbox.theme-burn:checked + .toggle-button {
-    background-color: #ff6b6b;
+.toggle-checkbox.theme-fire:checked + .toggle-button {
+    background-color: #ea5514;
     color: #fff;
-    border-color: #ff6b6b;
+    border-color: #ea5514;
+}
+
+.toggle-checkbox.theme-psychic:checked + .toggle-button {
+    background-color: #e0407e;
+    color: #fff;
+    border-color: #e0407e;
 }
 
 .toggle-button:active {
     transform: scale(0.96);
+}
+
+/* 補助効果欄の枠 */
+.effects-section {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+.move-section-spacer {
+    display: none;
 }
 
 footer {
@@ -339,4 +358,9 @@ footer {
     .defender { grid-area: defend; }
     .global-effects { grid-area: global; }
     .result-box { grid-area: result; }
+
+    .move-section-spacer {
+        display: block;
+        height: 50px; /* 技欄の高さを確保 */
+    }
 }

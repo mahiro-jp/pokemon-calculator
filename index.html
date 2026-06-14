@@ -239,13 +239,15 @@
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label>補助効果</label>
-                    <div class="effect-buttons">
+            <div class="effects-section">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>補助効果</label>
                         <!-- チェックボックスはCSSで非表示にし、labelをボタンとして見せる -->
-                        <input type="checkbox" id="atk-burn" class="toggle-checkbox theme-burn">
-                        <label for="atk-burn" class="toggle-button">やけど</label>
+                        <div class="effect-buttons">
+                            <input type="checkbox" id="atk-burn" class="toggle-checkbox theme-fire">
+                            <label for="atk-burn" class="toggle-button">やけど</label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -450,6 +452,28 @@
                         </select>
                     </div>
                     <div class="cell-real"><span class="real-value" id="def-real-spd">0</span></div>
+                </div>
+            </div>
+
+            <div class="defender-effects-wrap">
+                <div class="move-section-spacer"></div>
+                <div class="effects-section">
+                    <div class="form-row">
+                        <!-- チェックボックスはCSSで非表示にし、labelをボタンとして見せる -->
+                        <div class="form-group">
+                            <label>補助効果</label>
+                            <div class="effect-buttons">
+                                <input type="checkbox" id="def-reflect" class="toggle-checkbox theme-psychic">
+                                <label for="def-reflect" class="toggle-button">リフレクター</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="effect-buttons">
+                                <input type="checkbox" id="def-light-screen" class="toggle-checkbox theme-psychic">
+                                <label for="def-light-screen" class="toggle-button">ひかりのかべ</label>
+                            </div>
+                        </div>
+                   </div>
                 </div>
             </div>
         </section>
