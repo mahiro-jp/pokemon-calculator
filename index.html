@@ -507,7 +507,29 @@
 
         <section class="result-box">
             <h2>計算結果</h2>
-            <div class="placeholder-content">（通常時・急所時のダメージ、割合、確定数表示エリア）</div>
+            <div class="result-display">
+                <div class="result-row">
+                    <span class="result-label">ダメージ</span>
+                    <span class="result-values">
+                        <span id="calc-damage-low">0</span> 〜 <span id="calc-damage-high">0</span>
+                    </span>
+                    <span class="result-ratio">
+                        (<span id="calc-percentage-low">0.0</span>% 〜 <span id="calc-percentage-high">0.0</span>%)
+                    </span>
+                    <span class="result-text" id="calc-knockout-estimate">確定0発</span>
+                </div>
+
+                <div class="result-row">
+                    <span class="result-label label-critical">急所</span>
+                    <span class="result-values">
+                        <span id="calc-crit-low">0</span> 〜 <span id="calc-crit-high">0</span>
+                    </span>
+                    <span class="result-ratio">
+                        (<span id="calc-crit-percentage-low">0.0</span>% 〜 <span id="calc-crit-percentage-high">0.0</span>%)
+                    </span>
+                    <span class="result-text" id="calc-crit-knockout-estimate">確定0発</span>
+                </div>
+            </div>
         </section>
 
     </main>

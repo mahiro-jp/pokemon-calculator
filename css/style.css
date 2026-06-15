@@ -61,17 +61,6 @@ h1 {
 .attacker h2 { border-bottom-color: #ff6b6b; }
 .defender h2 { border-bottom-color: #4dabf7; }
 
-/* 仮実装：項目配置エリア（中身を実装時に削除） */
-.placeholder-content {
-    background: #f8f9fa;
-    padding: 40px 10px;
-    text-align: center;
-    color: #868e96;
-    border: 1px dashed #dee2e6;
-    border-radius: 4px;
-    margin-top: 10px;
-}
-
 /* 横並びにする */
 .form-row {
     display: flex;
@@ -344,12 +333,77 @@ h1 {
     margin-bottom: 15px;
 }
 
-.global-effects h2 {
+.global-effects h2,
+.result-box h2 {
     font-size: 1.1rem;
     color: #212529;
     margin-bottom: 12px;
     border-bottom: 2px solid #333;
     padding-bottom: 4px;
+}
+
+.result-box {
+    color: #212529;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.result-display {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.result-row {
+    display: grid;
+    grid-template-columns: 60px 95px 105px 1fr;
+    align-items: center;
+    font-family: monospace;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.result-label {
+    color: #495057;
+    font-weight: bold;
+}
+
+.label-critical {
+    color: #6c757d;
+    font-weight: normal; /* 補足なので少し細字にして一歩引かせる */
+}
+
+.result-values {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #212529;
+    text-align: right;
+    padding-right: 8px;
+}
+
+.result-ratio {
+    color: #212529;
+    text-align: center;
+    font-weight: 600;
+}
+
+.result-row:last-child .result-ratio {
+    color: #495057;
+    font-weight: normal;
+}
+
+.result-text {
+    font-weight: bold;
+    color: #212529;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.result-row:last-child .result-text {
+    color: #495057;
+    font-weight: normal;
 }
 
 footer {
