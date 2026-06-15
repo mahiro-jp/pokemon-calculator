@@ -480,7 +480,29 @@
 
         <section class="global-effects">
             <h2>全体効果</h2>
-            <div class="placeholder-content">（天気・フィールドの選択エリア）</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="global-weather">天気</label>
+                    <select id="global-weather">
+                        <option value="none">なし</option>
+                        <option value="sunny">にほんばれ</option>
+                        <option value="rain">あめ</option>
+                        <option value="sandstorm">すなあらし</option>
+                        <option value="snow">ゆき</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="global-field">フィールド</label>
+                    <select id="global-field">
+                        <option value="none">なし</option>
+                        <option value="electric-terrain">エレキフィールド</option>
+                        <option value="grassy-terrain">グラスフィールド</option>
+                        <option value="misty-terrain">ミストフィールド</option>
+                        <option value="psychic-terrain">サイコフィールド</option>
+                    </select>
+                </div>
+            </div>
         </section>
 
         <section class="result-box">

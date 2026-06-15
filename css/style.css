@@ -335,6 +335,23 @@ h1 {
     display: none;
 }
 
+/* 全体効果 */
+.global-effects {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.global-effects h2 {
+    font-size: 1.1rem;
+    color: #212529;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+}
+
 footer {
     text-align: center;
     margin-top: 30px;
@@ -356,7 +373,10 @@ footer {
     /* クラスとグリッドの対応 */
     .attacker { grid-area: attack; }
     .defender { grid-area: defend; }
-    .global-effects { grid-area: global; }
+    .global-effects {
+        grid-area: global;
+        margin-bottom: 0;
+    }
     .result-box { grid-area: result; }
 
     .move-section-spacer {
