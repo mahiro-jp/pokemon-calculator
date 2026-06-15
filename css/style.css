@@ -333,6 +333,16 @@ h1 {
     margin-bottom: 15px;
 }
 
+.global-effects .form-row {
+    justify-content: flex-start; /* 左寄せ */
+    gap: 16px;
+}
+
+.global-effects .form-group {
+    flex: none;     /* 引き伸ばし設定（flex: 1）を解除 */
+    max-width: 45%; /* 極小画面ではみ出さないように */
+}
+
 .global-effects h2,
 .result-box h2 {
     font-size: 1.1rem;
@@ -350,34 +360,19 @@ h1 {
     margin-bottom: 15px;
 }
 
-.result-display {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.result-box .form-row {
+    justify-content: flex-start; /* 左寄せ */
+    gap: 12px;
 }
 
-.result-row {
-    display: grid;
-    grid-template-columns: 60px 95px 105px 1fr;
-    align-items: center;
-    font-family: monospace;
-    font-size: 0.85rem;
-    line-height: 1.4;
-}
-
-.result-label {
-    color: #495057;
-    font-weight: bold;
-}
-
-.label-critical {
-    color: #6c757d;
-    font-weight: normal; /* 補足なので少し細字にして一歩引かせる */
+.result-box .form-group {
+    flex: none;     /* 引き伸ばし設定（flex: 1）を解除 */
+    max-width: 45%; /* 極小画面ではみ出さないように */
 }
 
 .result-values {
     font-size: 1.1rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #212529;
     text-align: right;
     padding-right: 8px;
@@ -389,21 +384,17 @@ h1 {
     font-weight: 600;
 }
 
-.result-row:last-child .result-ratio {
-    color: #495057;
+.form-row:last-child .result-values,
+.form-row:last-child .result-ratio,
+.form-row:last-child .result-text {
+    color: #212529;
     font-weight: normal;
 }
 
 .result-text {
-    font-weight: bold;
     color: #212529;
     text-align: left;
     padding-left: 4px;
-}
-
-.result-row:last-child .result-text {
-    color: #495057;
-    font-weight: normal;
 }
 
 footer {

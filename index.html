@@ -507,26 +507,36 @@
 
         <section class="result-box">
             <h2>計算結果</h2>
-            <div class="result-display">
-                <div class="result-row">
-                    <span class="result-label">ダメージ</span>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="result-values">ダメージ</label>
                     <span class="result-values">
                         <span id="calc-damage-low">0</span> 〜 <span id="calc-damage-high">0</span>
                     </span>
+                </div>
+                <div class="form-group">
                     <span class="result-ratio">
                         (<span id="calc-percentage-low">0.0</span>% 〜 <span id="calc-percentage-high">0.0</span>%)
                     </span>
+                </div>
+                <div class="form-group">
                     <span class="result-text" id="calc-knockout-estimate">確定0発</span>
                 </div>
+            </div>
 
-                <div class="result-row">
-                    <span class="result-label label-critical">急所</span>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="result-values">急所</label>
                     <span class="result-values">
                         <span id="calc-crit-low">0</span> 〜 <span id="calc-crit-high">0</span>
                     </span>
+                </div>
+                <div class="form-group">
                     <span class="result-ratio">
                         (<span id="calc-crit-percentage-low">0.0</span>% 〜 <span id="calc-crit-percentage-high">0.0</span>%)
                     </span>
+                </div>
+                <div class="form-group">
                     <span class="result-text" id="calc-crit-knockout-estimate">確定0発</span>
                 </div>
             </div>
