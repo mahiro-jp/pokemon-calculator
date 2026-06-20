@@ -1,0 +1,26 @@
+[
+    {
+        "name": "じしん",
+        "type": "じしん",
+        "category": "physical",
+        "power": 100
+    },
+    {
+        "name": "げきりん",
+        "type": "ドラゴン",
+        "category": "physical",
+        "power": 120
+    },
+    {
+        "name": "りゅうせいぐん",
+        "type": "ドラゴン",
+        "category": "special",
+        "power": 130
+    },
+    {
+        "name": "ラスターカノン",
+        "type": "はがね",
+        "category": "special",
+        "power": 80
+    }
+]

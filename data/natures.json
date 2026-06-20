@@ -1,0 +1,19 @@
+[
+    {"name": "まじめ", "buff": null, "nerf": "null"},
+    {"name": "さみしがり", "buff": "atk", "nerf": "def"},
+    {"name": "いじっぱり", "buff": "atk", "nerf": "spa"},
+    {"name": "やんちゃ", "buff": "atk", "nerf": "spd"},
+    {"name": "ゆうかん", "buff": "atk", "nerf": "spe"},
+    {"name": "ずぶとい", "buff": "def", "nerf": "atk"},
+    {"name": "わんぱく", "buff": "def", "nerf": "spa"},
+    {"name": "のうてんき", "buff": "def", "nerf": "spd"},
+    {"name": "のんき", "buff": "def", "nerf": "spe"},
+    {"name": "ひかえめ", "buff": "spa", "nerf": "atk"},
+    {"name": "おっとり", "buff": "spa", "nerf": "def"},
+    {"name": "うっかりや", "buff": "spa", "nerf": "spd"},
+    {"name": "れいせい", "buff": "spa", "nerf": "spe"},
+    {"name": "おくびょう", "buff": "spe", "nerf": "atk"},
+    {"name": "せっかち", "buff": "spe", "nerf": "def"},
+    {"name": "ようき", "buff": "spe", "nerf": "spa"},
+    {"name": "むじゃき", "buff": "spe", "nerf": "spd"}
+]
