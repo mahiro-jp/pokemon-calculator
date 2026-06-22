@@ -130,9 +130,14 @@ function updatePokemonTypes( prefix) {
 
     const pokemon = pokemonMaster.find( p => p.name === inputName);
     if ( pokemon) {
+        clearTypeBadgeClasses( type1Badge, type2Badge);
+
         type1Badge.textContent = pokemon.types[0];
+        type1Badge.classList.add( `type-${getTypeClassSuffix( pokemon.types[0])}`);
+
         if ( pokemon.types[1]) {
             type2Badge.textContent = pokemon.types[1];
+            type2Badge.classList.add( `type-${getTypeClassSuffix( pokemon.types[1])}`);
             type2Badge.style.display = '';
         } else {
             type2Badge.style.display = 'none';
@@ -151,4 +156,54 @@ function resetTypeBadges( type1Badge, type2Badge) {
     type1Badge.textContent = '';
     type2Badge.textContent = '';
     type2Badge.style.display = '';
+    clearTypeBadgeClasses( type1Badge, type2Badge);
+}
+
+/**
+ * タイプ表示のクラスをクリアします。
+ * @param {*} type1Badge タイプ１
+ * @param {*} type2Badge タイプ２
+ */
+function clearTypeBadgeClasses( type1Badge, type2Badge) {
+    const type1Classes = Array.from( type1Badge.classList);
+    const type2Classes = Array.from( type2Badge.classList);
+    type1Classes.forEach( c => {
+        if ( c.startsWith( 'type-') && c !== 'type-badge') {
+            type1Badge.classList.remove( c);
+        }
+    });
+    type2Classes.forEach( c => {
+        if ( c.startsWith( 'type-') && c !== 'type-badge') {
+            type2Badge.classList.remove( c);
+        }
+    });
+}
+
+/**
+ * タイプ名からCSS用のサフィックスを返します。
+ * @param {*} typeName タイプ名
+ * @returns サフィックス
+ */
+function getTypeClassSuffix( typeName) {
+    const typeMapping = {
+        'ノーマル': 'normal',
+        'くさ': 'grass',
+        'ほのお': 'fire',
+        'みず': 'water',
+        'でんき': 'electric',
+        'むし': 'bug',
+        'ひこう': 'flying',
+        'いわ': 'rock',
+        'どく': 'poison',
+        'じめん': 'ground',
+        'こおり': 'ice',
+        'かくとう': 'fighting',
+        'エスパー': 'psychic',
+        'ゴースト': 'ghost',
+        'ドラゴン': 'dragon',
+        'あく': 'dark',
+        'はがね': 'steel',
+        'フェアリー': 'fairy'
+    };
+    return typeMapping[typeName] || 'none';
 }

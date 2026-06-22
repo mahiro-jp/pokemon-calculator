@@ -84,6 +84,23 @@ h1 {
     flex: 1;
 }
 
+.form-row:first-of-type {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.form-row:first-of-type .flex-2 {
+    flex: none;
+    width: 180px;
+}
+
+.form-row:first-of-type .flex-1 {
+    flex: none;
+    width: auto;
+}
+
 .form-group label {
     display: block;
     color: #666;
@@ -106,18 +123,36 @@ h1 {
 
 /* タイプバッジ */
 .type-badge {
-    width: 100%;
-    height: 34px;
-    background-color: #e9ecef;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
+    display: inline-block;
+    font-size: 0.75rem;
     font-weight: bold;
-    color: #495057;
+    padding: 3px, 8px;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 55px;
+    background-color: #6c757d;
+    color: #ffffff;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
 }
+
+.type-normal   { background-color: #a8a878; }
+.type-fire     { background-color: #f08030; }
+.type-water    { background-color: #6890f0; }
+.type-grass    { background-color: #78c850; }
+.type-electric { background-color: #f8d030; color: #333 !important; } /* でんきだけ黒文字で見やすく */
+.type-ice      { background-color: #98d8d8; color: #333 !important; } /* こおりも黒文字で見やすく */
+.type-fighting { background-color: #c03028; }
+.type-poison   { background-color: #a040a0; }
+.type-ground   { background-color: #e0c068; }
+.type-flying   { background-color: #a890f0; }
+.type-psychic  { background-color: #f85888; }
+.type-bug      { background-color: #a8b820; }
+.type-rock     { background-color: #b8a038; }
+.type-ghost    { background-color: #705898; }
+.type-dragon   { background-color: #7038f8; }
+.type-dark     { background-color: #705848; }
+.type-steel    { background-color: #b8b8d0; color: #333 !important; } /* はがねも黒文字に見やすく */
+.type-fairy    { background-color: #ee99ac; }
 
 /* 種族値 */
 .race-values-row {
