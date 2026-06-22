@@ -12,6 +12,8 @@ document.addEventListener( 'DOMContentLoaded', initialize);
 function initialize() {
     // マスタデータの読み込み
     loadMasterData();
+    // ポケモン入力時のイベントリスナーを設定
+    setPokemonInputListeners();
 }
 
 /**
@@ -86,4 +88,67 @@ function populateNatureSelects() {
         attackerNatureSelect.appendChild( optionHtml.cloneNode(true));
         defenderNatureSelect.appendChild( optionHtml);
     });
+}
+
+/**
+ * ポケモン入力時のイベントリスナーを設定します。
+ */
+function setPokemonInputListeners() {
+    const attackerPokemonInput = document.getElementById( 'atk-name');
+    const defnderPokemonInput = document.getElementById( 'def-name');
+
+    if ( attackerPokemonInput) {
+        attackerPokemonInput.addEventListener( 'input', () => {
+            updatePokemonTypes( 'atk');
+        });
+    }
+    if ( defnderPokemonInput) {
+        defnderPokemonInput.addEventListener( 'input', () => {
+            updatePokemonTypes( 'def');
+        });
+    }
+}
+
+/**
+ * ポケモンのタイプ表示を更新します。
+ * @param {*} prefix 攻撃側(atk)または防御側(def)
+ */
+function updatePokemonTypes( prefix) {
+    const pokemonNameInput = document.getElementById( `${prefix}-name`);
+    const type1Badge = document.getElementById( `${prefix}-type1`);
+    const type2Badge = document.getElementById( `${prefix}-type2`);
+
+    if ( !pokemonNameInput || !type1Badge || !type2Badge) {
+        return;
+    }
+
+    const inputName = pokemonNameInput.value.trim();
+    if ( inputName === '') {
+        resetTypeBadges( type1Badge, type2Badge);
+        return;
+    }
+
+    const pokemon = pokemonMaster.find( p => p.name === inputName);
+    if ( pokemon) {
+        type1Badge.textContent = pokemon.types[0];
+        if ( pokemon.types[1]) {
+            type2Badge.textContent = pokemon.types[1];
+            type2Badge.style.display = '';
+        } else {
+            type2Badge.style.display = 'none';
+        }
+    } else {
+        resetTypeBadges( type1Badge, type2Badge);
+    }
+}
+
+/**
+ * タイプ表示を初期化します。
+ * @param {*} type1Badge タイプ１
+ * @param {*} type2Badge タイプ２
+ */
+function resetTypeBadges( type1Badge, type2Badge) {
+    type1Badge.textContent = '';
+    type2Badge.textContent = '';
+    type2Badge.style.display = '';
 }
